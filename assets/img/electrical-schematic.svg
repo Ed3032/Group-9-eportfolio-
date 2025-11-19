@@ -1,0 +1,50 @@
+<!-- Electrical Schematic (high-level) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-label="Electrical Schematic">
+  <style>
+    .bg{fill:#fbfcff}
+    .node{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:8}
+    .txt{font:600 16px/1 'Segoe UI',Arial;color:#0f172a}
+    .sub{font:400 13px/1 'Segoe UI',Arial;color:#475569}
+    .wire{stroke:#374151;stroke-width:2;fill:none}
+  </style>
+  <rect class="bg" width="1200" height="520"/>
+  <!-- Power -->
+  <g transform="translate(60,60)">
+    <rect class="node" width="220" height="100" />
+    <text x="20" y="36" class="txt">Battery / PSU</text>
+    <text x="20" y="62" class="sub">Li-ion / regulator</text>
+  </g>
+
+  <!-- Regulator -->
+  <g transform="translate(320,60)">
+    <rect class="node" width="220" height="100" />
+    <text x="20" y="36" class="txt">Power Regulator</text>
+    <text x="20" y="62" class="sub">5V / 3.3V outputs</text>
+  </g>
+
+  <!-- MCU -->
+  <g transform="translate(580,60)">
+    <rect class="node" width="220" height="100" />
+    <text x="20" y="36" class="txt">Microcontroller (MCU)</text>
+    <text x="20" y="62" class="sub">GPIO, comms, ADC</text>
+  </g>
+
+  <!-- Sensors/Actuator -->
+  <g transform="translate(60,200)">
+    <rect class="node" width="220" height="100" />
+    <text x="20" y="36" class="txt">Sensors</text>
+    <text x="20" y="62" class="sub">Ultrasonic / Level</text>
+  </g>
+
+  <g transform="translate(320,200)">
+    <rect class="node" width="220" height="100" />
+    <text x="20" y="36" class="txt">Motor Driver</text>
+    <text x="20" y="62" class="sub">H-bridge / PWM</text>
+  </g>
+
+  <!-- Wires -->
+  <path class="wire" d="M280 110 L320 110" />
+  <path class="wire" d="M540 110 L580 110" />
+  <path class="wire" d="M200 160 L200 200" />
+  <path class="wire" d="M460 160 L460 200" />
+</svg>

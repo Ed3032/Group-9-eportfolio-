@@ -1,0 +1,36 @@
+<!-- IoT Network Diagram -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-label="IoT Network Diagram">
+  <style>
+    .bg{fill:#fbfffe}
+    .device{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:10}
+    .label{font:600 16px/1 'Segoe UI',Arial;color:#0f172a}
+    .wire{stroke:#10b981;stroke-width:3;fill:none}
+  </style>
+  <rect class="bg" width="1200" height="520"/>
+  <!-- Devices -->
+  <g transform="translate(60,80)">
+    <rect class="device" width="160" height="100"/>
+    <text x="16" y="36" class="label">Sensor Node</text>
+  </g>
+  <g transform="translate(260,80)">
+    <rect class="device" width="160" height="100"/>
+    <text x="16" y="36" class="label">Gateway</text>
+    <text x="16" y="60" font-size="13" fill="#475569">LoRa / Wi‑Fi</text>
+  </g>
+  <g transform="translate(480,40)">
+    <rect class="device" width="260" height="160"/>
+    <text x="20" y="46" class="label">Edge Controller</text>
+    <text x="20" y="72" font-size="13" fill="#475569">MCU + motor driver</text>
+  </g>
+  <g transform="translate(820,80)">
+    <rect class="device" width="220" height="120"/>
+    <text x="20" y="36" class="label">Cloud Dashboard</text>
+    <text x="20" y="62" font-size="13" fill="#475569">API, DB, Web UI</text>
+  </g>
+
+  <!-- Connections -->
+  <path class="wire" d="M220 130 L260 130" />
+  <path class="wire" d="M420 120 L480 120" />
+  <path class="wire" d="M740 120 L820 120" />
+  <path class="wire" d="M600 80 Q700 10 820 80" />
+</svg>

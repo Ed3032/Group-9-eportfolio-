@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Member Journal | Smart Drainage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo"><i class="fas fa-water"></i> Smart<span>Drainage</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section member-journal">
+    <div class="container">
+      <div id="member-header" class="section-title">
+        <h2 id="member-name">Member Journal</h2>
+        <p><a href="progress.html">← Back to members</a></p>
+      </div>
+
+      <div id="member-journal">
+        <!-- content injected by script -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Smart Drainage System - IETP Group 9</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const params = new URLSearchParams(location.search);
+      const slug = (params.get('member') || '').toLowerCase();
+      const journalEl = document.getElementById('member-journal');
+      const nameEl = document.getElementById('member-name');
+
+      // Samrawit (samri) content
+      const samriContent = `
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-body">
+            <p>In the first week, we attended the orientation for the IETP introduction. After that, I reached out to our advisor to inform him that we would be working on an innovation project under his supervision. Our team president then gathered all members and created a Telegram group for better communication.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 2</strong></div>
+          <div class="journal-body">
+            <p>During the second week, we started discussing possible ideas for our innovation project. Each member shared their suggestions, and we later met with our advisor to present some of the proposed titles and get his feedback.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 3</strong></div>
+          <div class="journal-body">
+            <p>After reviewing the ideas with our advisor, we finalized our project title as "Optimization of Urban Drainage Clearance Using Smart Technology." We also completed and submitted Form A on October 24, 2025. I contributed by writing and editing the form before submission.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 4</strong></div>
+          <div class="journal-body">
+            <p>In this week, we began focusing on the design phase, mainly working on the electrical circuit design for the project as part of our development process.</p>
+          </div>
+        </article>
+      `;
+
+      // Amhasilasie (amha) content
+      const amhaContent = `
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-body">
+            <p>The team held our first internal meeting to discuss potential project ideas, followed by a meeting with the advisor to finalize the project title: "Smart Drainage System – An Automated Solution for Detecting and Clearing Blockages in City Curb Drains."</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 2</strong></div>
+          <div class="journal-body">
+            <p>Weekly team and advisor meetings were held to review research on urban drainage challenges and technologies for automatic blockage detection and cleaning. Preliminary system design, including the sensor array and mechanical striker concept, was drafted.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 3</strong></div>
+          <div class="journal-body">
+            <p>Internal and advisor meetings focused on refining the detailed system design and discussing technical specifications. Hardware components were sourced, and layouts for sensor and actuator modules were planned.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 4</strong></div>
+          <div class="journal-body">
+            <p>Weekly meetings continued to track progress and address challenges. Initial hardware development began, and all progress, notes, and updates were documented on the project website (ietp-group-9-project.netlify.app). Plans for the coming weeks include prototype assembly, IoT integration, and system simulations.</p>
+          </div>
+        </article>
+      `;
+
+      // Faysel content
+      const fayselContent = `
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-body">
+            <p>In the first week we dedicated time to orientation and team formation. The primary goal was to establish and organize the team, fostering mutual familiarity and laying the foundation for our upcoming project work.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 2</strong></div>
+          <div class="journal-body">
+            <p>The second week involved meeting our advisor to discuss the project concept. We also planned how we could work together effectively so that everyone could participate and improve the project.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 3</strong></div>
+          <div class="journal-body">
+            <p>In the third week we focused on choosing the project idea. We had a long discussion in our team meeting about several possibilities, then decided on the final one and discussed it with our advisor.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 4</strong></div>
+          <div class="journal-body">
+            <p>After we picked the idea and discussed it with our advisor, we finally split the work. As a civil engineering student my role was to perform the drainage system analysis for the project.</p>
+          </div>
+        </article>
+      `;
+
+      // Kirubel content
+      const kirubelContent = `
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-body">
+            <p>During the first week, our main focus was on forming the project team and being assigned an advisor. This stage allowed us to understand each team member's strengths and begin organizing roles and responsibilities accordingly. We also had an introductory meeting with our advisor to discuss general expectations, the IETP workflow, and the importance of teamwork throughout the project.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 2</strong></div>
+          <div class="journal-body">
+            <p>In the second week, our team began brainstorming potential project titles. After generating several ideas, we met with our advisor to discuss their feasibility and relevance to real-world problems. Following the discussion, we agreed on the Smart Drainage System concept as our main project focus. During this period, I was also appointed as the team leader, responsible for coordinating group activities and communication with our advisor.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 3</strong></div>
+          <div class="journal-body">
+            <p>After further reviewing and refining our project ideas with our advisor, we finalized the project title as "Optimization of Urban Drainage Clearance Using Smart Technology." We thoroughly discussed the project's objectives, practical applications, and scope before finalizing the decision. Additionally, our team completed and submitted Form A as part of the idea approval process.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 4</strong></div>
+          <div class="journal-body">
+            <p>During the fourth week, we transitioned into the design phase of our project and divided the tasks among team members. My primary focus was on developing the electrical circuit design, which serves as the foundation for the system's operation. The team collaborated to identify key components, establish circuit connections, and plan the functional logic of the system, marking the beginning of our technical development process.</p>
+          </div>
+        </article>
+      `;
+
+      // Hermela content (new)
+      const hermelaContent = `
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-body">
+            <p>First week was basically introductions and figuring out how to work as a team since we’re all from different departments. We spent time chatting, getting a feel for everyone’s schedules and skills, and swapping ideas on what we might want to tackle. Someone suggested checking out past IETP projects, so we scrolled through those to get a sense of what’s doable. Ended up creating a Telegram group to keep all our chats and files in one spot—way easier to stay organized.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 2</strong></div>
+          <div class="journal-body">
+            <p>We spent this week in brainstorming sessions, tossing around all sorts of ideas—a mix of creative and practical ones. Gradually we narrowed it down to a handful that seemed promising and realistic for our timeframe. Then came our main meeting with the advisor to pitch our shortlist. He gave us solid feedback, pointed out a few blind spots we hadn't considered, and helped us think through the logistics.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 3</strong></div>
+          <div class="journal-body">
+            <p>After the advisor’s feedback, we finally locked in our project title: “Optimization of Urban Drainage Clearance Using Smart Technology.” I personally spent a chunk of time down research rabbit holes—reading up on how drainage clearance actually works, what tools are used, and what kind of digital platforms exist. While it took some effort to synthesize all that information, I'm finally getting a clear picture.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 4</strong></div>
+          <div class="journal-body">
+            <p>We pulled together our portfolio and sent it off to the advisor for his sign-off. Meanwhile, we didn’t want to just sit around waiting, so we started the proposal and mocking up the frontend for our alert system website—just basic layouts and navigation for now. We also mapped out the backend tasks and set up a GitHub repo so we’re ready to start merging our work soon.</p>
+          </div>
+        </article>
+      `;
+
+      // Emmanuel content (new)
+      const emmanuelContent = `
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-body">
+            <p>We met and introduced to each other. After that we brainstormed and decided to come up with ideas that would benefit our country and solve many issues.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 2</strong></div>
+          <div class="journal-body">
+            <p>We brought new ideas and talked specifically on two of them and tried to know what our contributions individually would be in our corresponding department.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 3</strong></div>
+          <div class="journal-body">
+            <p>We decided on what we will do and drew a draft and researched better mechanisms or sensors to use. Finally, we checked if we are all on the same page and assigned tasks for the next week.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 4</strong></div>
+          <div class="journal-body">
+            <p>We all tried to do our jobs and brought our individual and group assignments, reviewed and edited each other's work, and collected price estimates for the materials to be used.</p>
+          </div>
+        </article>
+      `;
+
+      // Default sample content if no specific member matched
+      const defaultContent = `
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-body">
+            <p>This journal is read-only. Select a member from the progress page to view their weekly updates.</p>
+          </div>
+        </article>
+      `;
+
+      // Select content by slug / alias
+      if (slug.includes('samrawit') || slug.includes('samri')) {
+        nameEl.textContent = 'Samrawit Zegeye — Weekly Journal';
+        journalEl.innerHTML = samriContent;
+      } else if (slug.includes('amhasilasie') || slug.includes('amha')) {
+        nameEl.textContent = 'Amhasilasie Mulugeta — Weekly Journal';
+        journalEl.innerHTML = amhaContent;
+      } else if (slug.includes('faysel') || slug.includes('faysel-nesru')) {
+        nameEl.textContent = 'Faysel Nesru — Weekly Journal';
+        journalEl.innerHTML = fayselContent;
+      } else if (slug.includes('kirubel') || slug.includes('kirubel-teshome') || slug.includes('kira')) {
+        nameEl.textContent = 'Kirubel Teshome — Weekly Journal';
+        journalEl.innerHTML = kirubelContent;
+      } else if (slug.includes('hermela') || slug.includes('hermela-dereje') || slug.includes('hd')) {
+        nameEl.textContent = 'Hermela Dereje — Weekly Journal';
+        journalEl.innerHTML = hermelaContent;
+      } else if (slug.includes('emmanuel') || slug.includes('emmanuel-yonas')) {
+        nameEl.textContent = 'Emmanuel Yonas — Weekly Journal';
+        journalEl.innerHTML = emmanuelContent;
+      } else {
+        nameEl.textContent = slug ? slug.replace(/[-_]/g, ' ') : 'Member Journal';
+        journalEl.innerHTML = defaultContent;
+      }
+    })();
+  </script>
+</body>
+</html>

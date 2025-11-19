@@ -1,0 +1,112 @@
+<!-- filename: assets/img/system-architecture.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 360" preserveAspectRatio="xMidYMid meet" role="img" aria-label="System Architecture Diagram">
+  <defs>
+    <!-- Palette -->
+    <style type="text/css">
+      .bg { fill: #f7fbfe; }
+      .block-fill { fill: #ffffff; } /* white blocks for contrast */
+      .block-stroke { stroke: #0f172a; stroke-width: 1.5; }
+      .block-accent { fill: #3498db; } /* used sparingly if needed */
+      .title { fill: #0f172a; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-weight:600; font-size:14px; }
+      .subtitle { fill: #64748b; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-weight:400; font-size:11px; }
+      .muted { fill: #cbd5e1; }
+      .accent-stroke { stroke: #1abc9c; }
+      .arrow { stroke: #60a5fa; stroke-width:3; fill: none; stroke-linecap:round; stroke-linejoin:round; }
+      .icon { stroke: #0f172a; stroke-width:2; fill: none; stroke-linecap:round; stroke-linejoin:round; }
+      text { -webkit-font-smoothing:antialiased; dominant-baseline:middle; }
+      .shadow { filter: drop-shadow(0 2px 4px rgba(15,23,42,0.06)); }
+    </style>
+
+    <!-- Arrowhead marker (single-ended) -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,4 L0,8 z" fill="#60a5fa"></path>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" x="0" y="0" width="920" height="360" rx="0" ry="0"></rect>
+
+  <!-- Layout variables (for clarity) -->
+  <!-- Sensors block (left) -->
+  <g class="block sensor" transform="translate(40,60)">
+    <rect class="block-fill block-stroke shadow" x="0" y="0" width="220" height="120" rx="12" ry="12"></rect>
+    <!-- Icon: simple sensor (circle + wave lines) -->
+    <g transform="translate(24,36)" stroke-linecap="round" stroke-linejoin="round">
+      <circle class="icon" cx="22" cy="18" r="12"></circle>
+      <path class="icon" d="M38 10 C44 8, 52 8, 58 12"></path>
+      <path class="icon" d="M38 26 C44 28, 52 28, 58 24"></path>
+    </g>
+    <!-- Text -->
+    <text class="title" x="80" y="36">Sensors</text>
+    <text class="subtitle" x="80" y="60">Environmental &amp; positional data</text>
+  </g>
+
+  <!-- Controller block (center-left) -->
+  <g class="block controller" transform="translate(320,60)">
+    <rect class="block-fill block-stroke shadow" x="0" y="0" width="220" height="120" rx="12" ry="12"></rect>
+    <!-- Icon: minimal MCU chip -->
+    <g transform="translate(24,36)">
+      <rect class="icon" x="0" y="2" width="36" height="28" rx="3" ry="3"></rect>
+      <path class="icon" d="M-4 8 L-8 8 M-4 18 L-8 18 M40 8 L44 8 M40 18 L44 18"></path>
+      <circle class="icon" cx="18" cy="16" r="2"></circle>
+    </g>
+    <!-- Text -->
+    <text class="title" x="80" y="36">Controller</text>
+    <text class="subtitle" x="80" y="60">MCU / Edge logic</text>
+  </g>
+
+  <!-- Actuator block (center-right) -->
+  <g class="block actuator" transform="translate(600,60)">
+    <rect class="block-fill block-stroke shadow" x="0" y="0" width="220" height="120" rx="12" ry="12"></rect>
+    <!-- Icon: small gear / motor -->
+    <g transform="translate(24,36)">
+      <circle class="icon" cx="22" cy="18" r="10"></circle>
+      <path class="icon" d="M22 6 L22 0 M22 30 L22 36 M6 18 L0 18 M44 18 L50 18 M8 8 L4 4 M36 28 L40 32 M36 8 L40 4 M8 28 L4 32"></path>
+      <rect class="icon" x="42" y="14" width="8" height="8" rx="2" ry="2"></rect>
+    </g>
+    <!-- Text -->
+    <text class="title" x="80" y="36">Actuator</text>
+    <text class="subtitle" x="80" y="60">Motor / Output device</text>
+  </g>
+
+  <!-- Cloud Dashboard block (bottom-center, spanning width) -->
+  <g class="block cloud" transform="translate(200,220)">
+    <rect class="block-fill block-stroke shadow" x="0" y="0" width="520" height="100" rx="12" ry="12"></rect>
+    <!-- Icon: simple cloud -->
+    <g transform="translate(26,30)" stroke-linecap="round" stroke-linejoin="round">
+      <path class="icon" d="M28 8 C20 8,16 16,22 20 L18 22 C10 22,6 28,10 32 L40 32 L46 30 C64 30,64 18,52 14 C50 8,40 6,34 8"></path>
+    </g>
+    <!-- Text -->
+    <text class="title" x="120" y="32">Cloud Dashboard</text>
+    <text class="subtitle" x="120" y="56">Telemetry, analytics &amp; control</text>
+  </g>
+
+  <!-- Arrows (non-scaling strokes) -->
+  <g vector-effect="non-scaling-stroke">
+    <!-- Sensors -> Controller -->
+    <path class="arrow" d="M260 120 L320 120" marker-end="url(#arrowhead)"></path>
+    <!-- Controller -> Actuator -->
+    <path class="arrow" d="M540 120 L600 120" marker-end="url(#arrowhead)"></path>
+    <!-- Controller -> Cloud Dashboard (vertical) -->
+    <path class="arrow" d="M430 180 L430 220" marker-end="url(#arrowhead)"></path>
+  </g>
+
+  <!-- Small invisible rectangles around arrow paths to enlarge hit targets (accessibility for pointer) -->
+  <!-- (kept non-filled and not visible but present for pointer) -->
+  <g fill="none" stroke="none" aria-hidden="true">
+    <rect x="256" y="112" width="72" height="16" opacity="0"></rect>
+    <rect x="536" y="112" width="72" height="16" opacity="0"></rect>
+    <rect x="426" y="176" width="8" height="52" opacity="0"></rect>
+  </g>
+
+  <!-- Notes: vector-effect on icons and arrows to keep stroke crisp when scaled -->
+  <script type="application/ecmascript">
+    // Ensure icons &amp; arrows don't scale stroke on some viewers
+    (function(svg){
+      try {
+        var nodes = svg.querySelectorAll('.icon, .arrow');
+        for(var i=0;i&lt;nodes.length;i++) nodes[i].setAttribute('vector-effect','non-scaling-stroke');
+      } catch(e){}
+    })(document.currentScript.ownerDocument || document);
+  </script>
+</svg>

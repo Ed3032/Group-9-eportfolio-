@@ -1,0 +1,13 @@
+<!-- System block diagram placeholder -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-label="System Block Diagram">
+  <rect width="1200" height="700" fill="#f3f6fb"/>
+  <g transform="translate(80,80)">
+    <rect x="0" y="0" width="420" height="220" rx="12" fill="#fff" stroke="#e2e8f0"/>
+    <text x="20" y="36" font-family="Segoe UI,Arial" font-weight="700" font-size="20" fill="#1f2937">Sensors</text>
+    <rect x="510" y="0" width="420" height="220" rx="12" fill="#fff" stroke="#e2e8f0"/>
+    <text x="530" y="36" font-family="Segoe UI,Arial" font-weight="700" font-size="20" fill="#1f2937">Controller</text>
+    <rect x="255" y="280" width="420" height="220" rx="12" fill="#fff" stroke="#e2e8f0"/>
+    <text x="275" y="316" font-family="Segoe UI,Arial" font-weight="700" font-size="20" fill="#1f2937">Actuator / Striker</text>
+    <line x1="420" y1="110" x2="510" y2="110" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

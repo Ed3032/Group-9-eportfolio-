@@ -1,0 +1,49 @@
+<!-- System Architecture Diagram -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-label="System Architecture Diagram">
+  <style>
+    .bg{fill:#f7fbfe}
+    .block{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:10;ry:10}
+    .label{font:600 18px/1 'Segoe UI',Arial,Helvetica;color:#0f172a}
+    .sub{font:400 13px/1 'Segoe UI',Arial;color:#475569}
+    .arrow{stroke:#60a5fa;stroke-width:4;fill:none;marker-end:url(#m)}
+  </style>
+  <defs>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="520"/>
+  <!-- Sensors -->
+  <g transform="translate(60,60)">
+    <rect class="block" width="240" height="120" rx="12"/>
+    <text x="20" y="36" class="label">Sensors</text>
+    <text x="20" y="62" class="sub">Ultrasonic / Water level / Temp</text>
+  </g>
+
+  <!-- Controller -->
+  <g transform="translate(360,60)">
+    <rect class="block" width="240" height="120" rx="12"/>
+    <text x="20" y="36" class="label">Controller</text>
+    <text x="20" y="62" class="sub">MCU, comms, control logic</text>
+  </g>
+
+  <!-- Actuator -->
+  <g transform="translate(660,60)">
+    <rect class="block" width="240" height="120" rx="12"/>
+    <text x="20" y="36" class="label">Actuator</text>
+    <text x="20" y="62" class="sub">Rail-mounted striker, motor driver</text>
+  </g>
+
+  <!-- Cloud / Dashboard -->
+  <g transform="translate(360,220)">
+    <rect class="block" width="540" height="140" rx="12"/>
+    <text x="20" y="36" class="label">Cloud Dashboard</text>
+    <text x="20" y="62" class="sub">Data storage, alerts, web UI</text>
+  </g>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M300 120 L360 120" />
+  <path class="arrow" d="M600 120 L660 120" />
+  <path class="arrow" d="M480 180 L480 220" />
+  <path class="arrow" d="M760 180 L760 220" />
+</svg>

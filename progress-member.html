@@ -78,6 +78,38 @@
         </article>
       `;
 
+
+      // Fares Haile
+      const faresContent = `
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-body">
+            <p> Since I wasn't able to attend the initial orientation, I connected with the team afterwards to get up to speed. I was introduced to everyone and learned about the project's framework and goals. We began our initial discussions on potential ideas, focusing on problems we could solve that would have a real impact for our community.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 2</strong></div>
+          <div class="journal-body">
+            <p>This week, we all brought our researched ideas to the table for a deeper discussion. We narrowed the list down to a couple of strong concepts and started talking about what each department would need to do. It was helpful to start defining our individual roles and how we would contribute to the project's different technical areas.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 3</strong></div>
+          <div class="journal-body">
+            <p> The team finalized the project title as "Optimization of Urban Drainage Clearance Using Smart Technology." We worked together to complete Form A, ensuring all the objectives and scope were clearly defined. I reviewed the form with the team to make sure I was aligned with everyone on the project's direction and technical requirements before submission.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 4</strong></div>
+          <div class="journal-body">
+            <p>This week, we began the design phase for our project. I partnered with one of my teammates to start working on the initial design layout. We discussed different approaches and components, and we've started mapping out the core structure. The design is still in progress, but we have a good foundation to build on and plan to continue developing it next week.</p>
+          </div>
+        </article>
+      `;
+
       // Amhasilasie (amha) content
       const amhaContent = `
         <article class="journal-entry">
@@ -171,6 +203,7 @@
         </article>
       `;
 
+
       // Hermela content (new)
       const hermelaContent = `
         <article class="journal-entry">
@@ -233,6 +266,38 @@
         </article>
       `;
 
+      // Eden content
+      const edenContent = `
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-body">
+            <p>The team held our first internal meeting to discuss potential project ideas, followed by a meeting with the advisor to finalize the project title: "Smart Drainage System – An Automated Solution for Detecting and Clearing Blockages in City Curb Drains."</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 2</strong></div>
+          <div class="journal-body">
+            <p>Weekly team and advisor meetings were held to review research on urban drainage challenges and technologies for automatic blockage detection and cleaning. Preliminary system design, including the sensor array and mechanical striker concept, was drafted.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 3</strong></div>
+          <div class="journal-body">
+            <p>Internal and advisor meetings focused on refining the detailed system design and discussing technical specifications. Hardware components were sourced, and layouts for sensor and actuator modules were planned.</p>
+          </div>
+        </article>
+
+        <article class="journal-entry">
+          <div class="journal-meta"><strong>Week 4</strong></div>
+          <div class="journal-body">
+            <p>Weekly meetings continued to track progress and address challenges. Initial hardware development began, and all progress, notes, and updates were documented on the project website (ietp-group-9-project.netlify.app). Plans for the coming weeks include prototype assembly, IoT integration, and system simulations.</p>
+          </div>
+        </article>
+      `;
+
+
       // Default sample content if no specific member matched
       const defaultContent = `
         <article class="journal-entry">
@@ -262,7 +327,13 @@
       } else if (slug.includes('emmanuel') || slug.includes('emmanuel-yonas')) {
         nameEl.textContent = 'Emmanuel Yonas — Weekly Journal';
         journalEl.innerHTML = emmanuelContent;
-      } else {
+      }else if (slug.includes('fares') || slug.includes('fares-haile')) {
+        nameEl.textContent = 'Fares Haile — Weekly Journal';
+        journalEl.innerHTML = emmanuelContent;
+      }else if (slug.includes('eden') || slug.includes('eden-yedemie')) {
+        nameEl.textContent = 'Eden Yedemie — Weekly Journal';
+        journalEl.innerHTML = emmanuelContent;
+      }else {
         nameEl.textContent = slug ? slug.replace(/[-_]/g, ' ') : 'Member Journal';
         journalEl.innerHTML = defaultContent;
       }

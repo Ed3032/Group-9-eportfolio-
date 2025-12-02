@@ -79,7 +79,7 @@
       `;
 
 
-      // Fares Haile
+      // Fares (fares) Content
       const faresContent = `
         <article class="journal-entry">
           <div class="journal-meta"><strong>Week 1</strong></div>
@@ -105,15 +105,15 @@
         <article class="journal-entry">
           <div class="journal-meta"><strong>Week 4</strong></div>
           <div class="journal-body">
-            <p>This week, we began the design phase for our project. I partnered with one of my teammates to start working on the initial design layout. We discussed different approaches and components, and we've started mapping out the core structure. The design is still in progress, but we have a good foundation to build on and plan to continue developing it next week.</p>
+            <p>This week, we began the design phase for our project. I partnered with one of my teammates to start working on the initial design layout. We discussed different approaches and components, and we have started mapping out the core structure. The design is still in progress, but we have a good foundation to build on and plan to continue developing it next week.</p>
           </div>
         </article>
       `;
 
-      // Amhasilasie (amha) content
+      //Amhasilasie (amha) content
       const amhaContent = `
         <article class="journal-entry">
-          <div class="journal-meta"><strong>Week 1</strong></div>
+          <div class="journal-meta"><strong>Week 1</strong></div >
           <div class="journal-body">
             <p>The team held our first internal meeting to discuss potential project ideas, followed by a meeting with the advisor to finalize the project title: "Smart Drainage System – An Automated Solution for Detecting and Clearing Blockages in City Curb Drains."</p>
           </div>
@@ -328,11 +328,11 @@
         nameEl.textContent = 'Emmanuel Yonas — Weekly Journal';
         journalEl.innerHTML = emmanuelContent;
       }else if (slug.includes('fares') || slug.includes('fares-haile')) {
-        nameEl.textContent = 'Fares Haile — Weekly Journal';
-        journalEl.innerHTML = emmanuelContent;
+        nameEl.textContent = 'Fares Haile Kifle — Weekly Journal';
+        journalEl.innerHTML = faresContent;
       }else if (slug.includes('eden') || slug.includes('eden-yedemie')) {
-        nameEl.textContent = 'Eden Yedemie — Weekly Journal';
-        journalEl.innerHTML = emmanuelContent;
+        nameEl.textContent = 'Eden Yedemie Ejigu — Weekly Journal';
+        journalEl.innerHTML = edenContent;
       }else {
         nameEl.textContent = slug ? slug.replace(/[-_]/g, ' ') : 'Member Journal';
         journalEl.innerHTML = defaultContent;
